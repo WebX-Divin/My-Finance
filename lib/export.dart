@@ -1,2 +1,10 @@
 export 'package:flutter/material.dart';
 export 'package:my_finance/features/auth/presentation/pages/login_page.dart';
+export 'package:supabase_flutter/supabase_flutter.dart';
+export 'package:my_finance/features/auth/presentation/pages/signup_page.dart';
+export 'package:my_finance/core/onboarding/pages/auth_checker.dart';
+export 'package:email_validator/email_validator.dart';
+export 'package:my_finance/features/home/presentation/pages/home_page.dart';
+export 'package:my_finance/features/auth/presentation/pages/signup_verification_page.dart';
+export 'package:my_finance/features/auth/presentation/pages/forgot_password_page.dart';
+export 'package:my_finance/core/animation/sign_in_animation.dart';
