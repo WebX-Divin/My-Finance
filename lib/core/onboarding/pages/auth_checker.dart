@@ -1,3 +1,4 @@
+import 'package:my_finance/app.dart';
 import 'package:my_finance/export.dart';
 
 class AuthChecker extends StatefulWidget {
@@ -27,7 +28,7 @@ class _AuthCheckerState extends State<AuthChecker> {
 
     if (session != null) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => MainScreen()),
       );
     } else {
       Navigator.of(context).pushReplacement(

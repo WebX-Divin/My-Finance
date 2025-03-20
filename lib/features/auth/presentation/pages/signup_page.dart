@@ -82,7 +82,7 @@ class _SignUpPageState extends State<SignUpPage> {
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.purple.shade400],
+            colors: [Colors.white, Colors.purple.shade900],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -115,8 +115,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         controller: _emailController,
                         decoration: InputDecoration(
                           labelText: 'Email',
-                          prefixIcon:
-                              Icon(Icons.email, color: Colors.purple.shade400),
+                          prefixIcon: Icon(Icons.email,
+                              color: Colors.deepPurple.shade300),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -139,8 +139,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         controller: _passwordController,
                         decoration: InputDecoration(
                           labelText: 'Password',
-                          prefixIcon:
-                              Icon(Icons.lock, color: Colors.purple.shade400),
+                          prefixIcon: Icon(Icons.lock,
+                              color: Colors.deepPurple.shade300),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -164,7 +164,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: 'Confirm Password',
                           prefixIcon: Icon(Icons.lock_outline,
-                              color: Colors.purple.shade400),
+                              color: Colors.deepPurple.shade300),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -182,7 +182,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         },
                         obscureText: true,
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: _isLoading ? null : _signUp,
                         style: ElevatedButton.styleFrom(
@@ -198,11 +198,11 @@ class _SignUpPageState extends State<SignUpPage> {
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Colors.purple.shade400,
-                                Colors.purple.shade200
+                                Colors.deepPurple.shade400,
+                                Colors.deepPurple.shade800
                               ],
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
+                              begin: Alignment.topLeft,
+                              end: Alignment.topRight,
                             ),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -225,10 +225,9 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacement(
+                          Navigator.of(context).push(
                             FlipPageRoute(
                               builder: (_) => LoginPage(),
                               duration: const Duration(milliseconds: 700),
@@ -238,7 +237,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: Text(
                           'Already have an account? Sign In',
                           style: TextStyle(
-                              color: Colors.purple.shade400, fontSize: 16),
+                              color: Colors.deepPurple.shade300, fontSize: 10),
                         ),
                       ),
                     ],

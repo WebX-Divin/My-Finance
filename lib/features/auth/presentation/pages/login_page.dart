@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.purple.shade400],
+            colors: [Colors.white, Colors.purple.shade900],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -121,8 +121,10 @@ class _LoginPageState extends State<LoginPage> {
                         controller: _emailController,
                         decoration: InputDecoration(
                           labelText: 'Email',
-                          prefixIcon:
-                              Icon(Icons.email, color: Colors.purple.shade400),
+                          prefixIcon: Icon(
+                            Icons.email,
+                            color: Colors.deepPurple.shade300,
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -145,8 +147,10 @@ class _LoginPageState extends State<LoginPage> {
                         controller: _passwordController,
                         decoration: InputDecoration(
                           labelText: 'Password',
-                          prefixIcon:
-                              Icon(Icons.lock, color: Colors.purple.shade400),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: Colors.deepPurple.shade300,
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -161,7 +165,6 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         obscureText: true,
                       ),
-                      SizedBox(height: 15),
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
@@ -172,17 +175,20 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             );
                           },
-                          child: Text('Forgot Password?'),
+                          child: Text(
+                            'Forgot Password?',
+                            style: TextStyle(
+                                fontSize: 12, color: Colors.deepPurple),
+                          ),
                         ),
                       ),
-                      SizedBox(height: 15),
                       ElevatedButton(
                         onPressed: _isLoading ? null : _login,
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          padding: const EdgeInsets.symmetric(vertical: 5),
                           minimumSize: const Size(double.infinity, 50),
                           backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent,
@@ -191,8 +197,8 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Colors.purple.shade400,
-                                Colors.purple.shade200
+                                Colors.deepPurple.shade400,
+                                Colors.deepPurple.shade800
                               ],
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight,
@@ -218,10 +224,9 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacement(
+                          Navigator.of(context).push(
                             FlipPageRoute(
                               builder: (_) => SignUpPage(),
                               duration: const Duration(milliseconds: 700),
@@ -231,7 +236,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text(
                           "Don't have an account? Sign Up",
                           style: TextStyle(
-                              color: Colors.purple.shade400, fontSize: 16),
+                              color: Colors.deepPurple.shade300, fontSize: 10),
                         ),
                       ),
                     ],
